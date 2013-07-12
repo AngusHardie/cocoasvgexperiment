@@ -24,6 +24,7 @@
 		DEFB0F431790B8060082768E /* SQLContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F421790B8060082768E /* SQLContainer.m */; };
 		DEFB0F461790B92D0082768E /* SQLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F451790B92D0082768E /* SQLObject.m */; };
 		DEFB0F491790B9850082768E /* MHSVGElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F481790B9850082768E /* MHSVGElement.m */; };
+		DEFB0F541790CC300082768E /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = DEFB0F531790CC300082768E /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		DEFB0F471790B9840082768E /* MHSVGElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSVGElement.h; sourceTree = "<group>"; };
 		DEFB0F481790B9850082768E /* MHSVGElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSVGElement.m; sourceTree = "<group>"; };
 		DEFB0F511790C56A0082768E /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		DEFB0F531790CC300082768E /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				DEFB0F511790C56A0082768E /* license.txt */,
+				DEFB0F531790CC300082768E /* readme.md */,
 				DEFB0F0E1790B4B30082768E /* MHAppDelegate.h */,
 				DEFB0F0F1790B4B30082768E /* MHAppDelegate.m */,
 				DEFB0F111790B4B30082768E /* MainMenu.xib */,
@@ -272,6 +275,7 @@
 				DEFB0F071790B4B20082768E /* InfoPlist.strings in Resources */,
 				DEFB0F0D1790B4B30082768E /* Credits.rtf in Resources */,
 				DEFB0F131790B4B30082768E /* MainMenu.xib in Resources */,
+				DEFB0F541790CC300082768E /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +505,7 @@
 				DEFB0F2C1790B4B40082768E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEFB0F2D1790B4B40082768E /* Build configuration list for PBXNativeTarget "SVGExperimentTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +514,7 @@
 				DEFB0F2F1790B4B40082768E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
