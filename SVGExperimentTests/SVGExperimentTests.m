@@ -3,7 +3,7 @@
 //  SVGExperimentTests
 //
 //  Created by Angus Hardie on 12/07/2013.
-//  Copyright (c) 2013 MalcolmHardie Solutions. All rights reserved.
+//  Copyright (c) 2013 Angus Hardie. All rights reserved.
 //
 
 #import "SVGExperimentTests.h"
