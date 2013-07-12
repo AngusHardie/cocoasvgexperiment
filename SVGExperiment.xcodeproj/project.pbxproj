@@ -17,6 +17,13 @@
 		DEFB0F1C1790B4B40082768E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFB0EFC1790B4B20082768E /* Cocoa.framework */; };
 		DEFB0F241790B4B40082768E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEFB0F221790B4B40082768E /* InfoPlist.strings */; };
 		DEFB0F271790B4B40082768E /* SVGExperimentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F261790B4B40082768E /* SVGExperimentTests.m */; };
+		DEFB0F391790B58C0082768E /* MHSVGExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F341790B58C0082768E /* MHSVGExporter.m */; };
+		DEFB0F3B1790B58C0082768E /* MHSVGPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F381790B58C0082768E /* MHSVGPath.m */; };
+		DEFB0F3E1790B5EA0082768E /* SQLCanvasArea.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F3D1790B5EA0082768E /* SQLCanvasArea.m */; };
+		DEFB0F401790B7950082768E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFB0F3F1790B7950082768E /* WebKit.framework */; };
+		DEFB0F431790B8060082768E /* SQLContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F421790B8060082768E /* SQLContainer.m */; };
+		DEFB0F461790B92D0082768E /* SQLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F451790B92D0082768E /* SQLObject.m */; };
+		DEFB0F491790B9850082768E /* MHSVGElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0F481790B9850082768E /* MHSVGElement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,20 @@
 		DEFB0F231790B4B40082768E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DEFB0F251790B4B40082768E /* SVGExperimentTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVGExperimentTests.h; sourceTree = "<group>"; };
 		DEFB0F261790B4B40082768E /* SVGExperimentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVGExperimentTests.m; sourceTree = "<group>"; };
+		DEFB0F331790B58C0082768E /* MHSVGExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSVGExporter.h; sourceTree = "<group>"; };
+		DEFB0F341790B58C0082768E /* MHSVGExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSVGExporter.m; sourceTree = "<group>"; };
+		DEFB0F371790B58C0082768E /* MHSVGPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSVGPath.h; sourceTree = "<group>"; };
+		DEFB0F381790B58C0082768E /* MHSVGPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSVGPath.m; sourceTree = "<group>"; };
+		DEFB0F3C1790B5EA0082768E /* SQLCanvasArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLCanvasArea.h; sourceTree = "<group>"; };
+		DEFB0F3D1790B5EA0082768E /* SQLCanvasArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLCanvasArea.m; sourceTree = "<group>"; };
+		DEFB0F3F1790B7950082768E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		DEFB0F411790B8060082768E /* SQLContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLContainer.h; sourceTree = "<group>"; };
+		DEFB0F421790B8060082768E /* SQLContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLContainer.m; sourceTree = "<group>"; };
+		DEFB0F441790B92D0082768E /* SQLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLObject.h; sourceTree = "<group>"; };
+		DEFB0F451790B92D0082768E /* SQLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLObject.m; sourceTree = "<group>"; };
+		DEFB0F471790B9840082768E /* MHSVGElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSVGElement.h; sourceTree = "<group>"; };
+		DEFB0F481790B9850082768E /* MHSVGElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSVGElement.m; sourceTree = "<group>"; };
+		DEFB0F511790C56A0082768E /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFB0F401790B7950082768E /* WebKit.framework in Frameworks */,
 				DEFB0EFD1790B4B20082768E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +116,7 @@
 		DEFB0EFB1790B4B20082768E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEFB0F3F1790B7950082768E /* WebKit.framework */,
 				DEFB0EFC1790B4B20082768E /* Cocoa.framework */,
 				DEFB0F1A1790B4B40082768E /* SenTestingKit.framework */,
 				DEFB0EFE1790B4B20082768E /* Other Frameworks */,
@@ -114,9 +137,17 @@
 		DEFB0F021790B4B20082768E /* SVGExperiment */ = {
 			isa = PBXGroup;
 			children = (
+				DEFB0F511790C56A0082768E /* license.txt */,
 				DEFB0F0E1790B4B30082768E /* MHAppDelegate.h */,
 				DEFB0F0F1790B4B30082768E /* MHAppDelegate.m */,
 				DEFB0F111790B4B30082768E /* MainMenu.xib */,
+				DEFB0F4A1790B9B50082768E /* Sample Objects */,
+				DEFB0F331790B58C0082768E /* MHSVGExporter.h */,
+				DEFB0F341790B58C0082768E /* MHSVGExporter.m */,
+				DEFB0F471790B9840082768E /* MHSVGElement.h */,
+				DEFB0F481790B9850082768E /* MHSVGElement.m */,
+				DEFB0F371790B58C0082768E /* MHSVGPath.h */,
+				DEFB0F381790B58C0082768E /* MHSVGPath.m */,
 				DEFB0F031790B4B20082768E /* Supporting Files */,
 			);
 			path = SVGExperiment;
@@ -151,6 +182,19 @@
 				DEFB0F221790B4B40082768E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEFB0F4A1790B9B50082768E /* Sample Objects */ = {
+			isa = PBXGroup;
+			children = (
+				DEFB0F3C1790B5EA0082768E /* SQLCanvasArea.h */,
+				DEFB0F3D1790B5EA0082768E /* SQLCanvasArea.m */,
+				DEFB0F411790B8060082768E /* SQLContainer.h */,
+				DEFB0F421790B8060082768E /* SQLContainer.m */,
+				DEFB0F441790B92D0082768E /* SQLObject.h */,
+				DEFB0F451790B92D0082768E /* SQLObject.m */,
+			);
+			name = "Sample Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +308,12 @@
 			files = (
 				DEFB0F091790B4B20082768E /* main.m in Sources */,
 				DEFB0F101790B4B30082768E /* MHAppDelegate.m in Sources */,
+				DEFB0F391790B58C0082768E /* MHSVGExporter.m in Sources */,
+				DEFB0F3B1790B58C0082768E /* MHSVGPath.m in Sources */,
+				DEFB0F3E1790B5EA0082768E /* SQLCanvasArea.m in Sources */,
+				DEFB0F431790B8060082768E /* SQLContainer.m in Sources */,
+				DEFB0F461790B92D0082768E /* SQLObject.m in Sources */,
+				DEFB0F491790B9850082768E /* MHSVGElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
