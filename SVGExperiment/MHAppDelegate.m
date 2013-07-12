@@ -35,7 +35,7 @@
     
     // set up some objects first
     
-    SQLContainer* container = [[SQLContainer alloc] init];
+    SQLContainer* container = [[[SQLContainer alloc] init] autorelease];
     
     
     SQLCanvasArea* canvasArea = [[[SQLCanvasArea alloc] init] autorelease];
@@ -84,7 +84,7 @@
     
     
     
-    [container release];
+
 }
 
 @end
