@@ -318,6 +318,7 @@ typedef enum {MHConnectablePointTop,MHConnectablePointLeft,MHConnectablePointBot
     
     id transformGroup = [NSXMLNode elementWithName:@"g"];
     
+    // transform is used to improve onscreen appearance, alignment with pixels mainly
     [transformGroup addAttribute:[NSXMLNode attributeWithName:@"transform" stringValue:@"translate(0.5,0.5)"]];
     
     
