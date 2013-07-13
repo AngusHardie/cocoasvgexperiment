@@ -180,8 +180,7 @@ typedef NS_ENUM(NSUInteger, MHConnectablePointType) {
     id commentGroup = [MHSVGElement elementWithName:@"g"];
     
     [commentGroup addAttribute:[NSXMLNode attributeWithName:@"class" stringValue:@"SQLCanvasArea"]];
-    
-
+    [commentGroup addAttribute:[NSXMLNode attributeWithName:@"id" stringValue:object.name]];
     
     NSRect areaRect;
     areaRect.origin = [object location];
