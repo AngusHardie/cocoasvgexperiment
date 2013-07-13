@@ -80,7 +80,7 @@ typedef NS_ENUM(NSUInteger, MHConnectablePointType) {
 }
 
 // returns a MHSVGElement representing a line from point start to point end
-// default stroke witdth of 1, color black
+// default stroke width of 1, color black
 - (MHSVGElement*)lineElement:(NSPoint)start end:(NSPoint)end
 {
     id dividerLine = [MHSVGElement elementWithName:@"line"];
@@ -173,7 +173,7 @@ typedef NS_ENUM(NSUInteger, MHConnectablePointType) {
 
 
 #pragma mark - component drawing
-// export SQLCanvas area to SVG,
+// export SQLCanvas area to SVG
 - (MHSVGElement*)exportSQLCanvasAreaToSVG:(SQLCanvasArea*)object
 {
     
