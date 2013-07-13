@@ -20,7 +20,16 @@
 
 
 
-typedef enum {MHConnectablePointTop,MHConnectablePointLeft,MHConnectablePointBottom,MHConnectablePointRight} MHConnectablePointType;
+#ifndef NS_ENUM
+#	define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
+#endif
+
+typedef NS_ENUM(NSUInteger, MHConnectablePointType) {
+	MHConnectablePointTop,
+	MHConnectablePointLeft,
+	MHConnectablePointBottom,
+	MHConnectablePointRight
+};
 
 
 #define OBJECT_LINE_SPACE 25
