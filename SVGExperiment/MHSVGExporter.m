@@ -128,9 +128,9 @@ typedef NS_ENUM(NSUInteger, MHConnectablePointType) {
 
 // returns MHSVGElement representing a rectangle
 - (MHSVGElement*)rectangleElement:(NSRect)objectRect
-             fillColor:(NSColor*)color
-           strokeColor:(NSColor*)strokeColor
-          cornerRadius:(NSUInteger)radius
+						fillColor:(NSColor*)color
+					  strokeColor:(NSColor*)strokeColor
+					 cornerRadius:(NSUInteger)radius
 {
     id mainFrame = [MHSVGElement elementWithName:@"rect"];
 
