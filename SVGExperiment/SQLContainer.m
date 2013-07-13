@@ -12,7 +12,7 @@
 
 @implementation SQLContainer
 
-@synthesize objectList;
+@synthesize objectList = _objectList;
 
 - (id)init
 {
@@ -21,14 +21,14 @@
     
     if (self) {
         
-        objectList = [[NSMutableArray alloc] initWithCapacity:1];
+        _objectList = [[NSMutableArray alloc] initWithCapacity:1];
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [objectList release];
+    [_objectList release];
     [super dealloc];
 }
 

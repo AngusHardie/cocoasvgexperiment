@@ -12,8 +12,8 @@
 @interface MHSVGExporter : NSObject
 {
     
-    SQLContainer* container;
-    NSRect imageBounds;
+    SQLContainer* _container;
+    NSRect _imageBounds;
 }
 @property (retain) SQLContainer* container;
 

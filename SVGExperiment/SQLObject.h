@@ -11,7 +11,7 @@
 @interface SQLObject : NSObject
 {
     
-    NSMutableDictionary* properties;
+    NSMutableDictionary* _properties;
 }
 
 @property (assign) NSPoint location;

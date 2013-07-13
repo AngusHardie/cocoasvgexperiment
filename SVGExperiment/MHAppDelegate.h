@@ -20,4 +20,6 @@
 
 @property (retain) IBOutlet NSTextView* sourceView;
 
+@property (assign) BOOL dumpToFile;
+
 @end
