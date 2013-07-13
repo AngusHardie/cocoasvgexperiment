@@ -13,10 +13,19 @@
 
 @implementation MHAppDelegate
 @synthesize svgSource = _svgSource;
+@synthesize dumpToFile = _dumpToFile;
 
 
-
-
+- (id)init
+{
+    self = [super init];
+	
+    if (self) {
+        _dumpToFile = YES;
+    }
+	
+    return self;
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -68,13 +77,6 @@
     
     self.svgSource = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
     
-
-    
-    // uncomment to save data to disk
-    //[data writeToFile:@"test.svg" atomically:YES];
-    
-    
-    
     
     
     [[self.webView mainFrame]  loadData:data
@@ -82,7 +84,10 @@
                        textEncodingName:@"UTF-8"
                                 baseURL:[NSURL URLWithString:@"http://localhost/"]];
     
-    
+	
+    if (self.dumpToFile) {
+		[data writeToFile:@"test.svg" atomically:YES];
+	}
     
 
 }
