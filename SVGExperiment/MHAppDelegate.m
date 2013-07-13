@@ -90,6 +90,7 @@
 	}
     
 
+    [exporter release];
 }
 
 @end
