@@ -12,7 +12,7 @@
 #import "SQLContainer.h"
 
 @implementation MHAppDelegate
-@synthesize svgSource;
+@synthesize svgSource = _svgSource;
 
 
 

@@ -27,8 +27,8 @@ typedef enum {MHConnectablePointTop,MHConnectablePointLeft,MHConnectablePointBot
 
 @implementation MHSVGExporter
 
-@synthesize container;
-@synthesize imageBounds;
+@synthesize container = _container;
+@synthesize imageBounds = _imageBounds;
 
 - (id)init
 {
@@ -300,16 +300,16 @@ typedef enum {MHConnectablePointTop,MHConnectablePointLeft,MHConnectablePointBot
     id exportNode = [NSXMLElement elementWithName:@"svg"];
     
     
-    id viewBoxString = [NSString stringWithFormat:@"%.0f %.0f %.0f %.0f",imageBounds.origin.x,imageBounds.origin.y,imageBounds.size.width,imageBounds.size.height];
+    id viewBoxString = [NSString stringWithFormat:@"%.0f %.0f %.0f %.0f",_imageBounds.origin.x,_imageBounds.origin.y,_imageBounds.size.width,_imageBounds.size.height];
     
     [exportNode addAttribute:[NSXMLNode attributeWithName:@"viewBox" stringValue:viewBoxString]];
     
     
     [exportNode addAttribute:[NSXMLNode attributeWithName:@"width"
-                                              stringValue:[NSString stringWithFormat:@"%.0f",imageBounds.size.width]]];
+                                              stringValue:[NSString stringWithFormat:@"%.0f",_imageBounds.size.width]]];
 
     [exportNode addAttribute:[NSXMLNode attributeWithName:@"height"
-                                              stringValue:[NSString stringWithFormat:@"%.0f",imageBounds.size.height]]];
+                                              stringValue:[NSString stringWithFormat:@"%.0f",_imageBounds.size.height]]];
     
     id namespace = [NSXMLNode namespaceWithName:@"" stringValue:@"http://www.w3.org/2000/svg"];
     

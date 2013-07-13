@@ -10,9 +10,9 @@
 
 @implementation MHSVGPath
 
-@synthesize segments;
-@synthesize fill;
-@synthesize stroke;
+@synthesize segments = _segments;
+@synthesize fill = _fill;
+@synthesize stroke = _stroke;
 
 - (id)init
 {

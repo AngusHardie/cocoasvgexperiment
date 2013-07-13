@@ -12,9 +12,9 @@
 @interface MHSVGPath : MHSVGElement
 {
     
-    NSMutableArray* segments;
-    NSColor* fill;
-    NSColor* stroke;
+    NSMutableArray* _segments;
+    NSColor* _fill;
+    NSColor* _stroke;
     
 }
 
