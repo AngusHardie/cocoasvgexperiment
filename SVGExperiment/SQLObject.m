@@ -10,9 +10,9 @@
 
 @implementation SQLObject
 
-@synthesize location;
-@synthesize size;
-@synthesize color;
+@synthesize location = _location;
+@synthesize size = _size;
+@synthesize color = _color;
 
 
 - (id)init
@@ -20,7 +20,7 @@
     self = [super init];
     if (self) {
         
-        properties = [[NSMutableDictionary alloc] initWithCapacity:1];
+        _properties = [[NSMutableDictionary alloc] initWithCapacity:1];
     }
     return self;
 }
@@ -28,7 +28,7 @@
 - (void)dealloc
 {
     
-    [properties release];
+    [_properties release];
     
     [super dealloc];
 }
@@ -49,7 +49,7 @@
 {
 
 	
-	id result = [properties valueForKey:key];
+	id result = [_properties valueForKey:key];
 	
 	
 	if (nil == result) {
@@ -62,7 +62,7 @@
 /// set property value 
 - (void)setProperty:(NSString*)key value:(id)value
 {
-    NSAssert(properties, @"Properties should not be nil");
+    NSAssert(_properties, @"Properties should not be nil");
     
 	if (nil == key) {
 		NSLog(@"attempted to set nil key for property");
@@ -76,21 +76,21 @@
 	
 	
 	
-	[properties setValue:value forKey:key];
+	[_properties setValue:value forKey:key];
 }
 
 /// returns YES if there is a property value associated with key
 - (BOOL)hasProperty:(NSString*)key
 {
 	
-	return ([[properties allKeys] containsObject:key]);
-	//return ([properties objectForKey:key] != nil);
+	return ([[_properties allKeys] containsObject:key]);
+	//return ([_properties objectForKey:key] != nil);
 }
 
 /// removes property value associated with key
 - (void)removeProperty:(NSString*)key
 {
-	[properties removeObjectForKey:key];
+	[_properties removeObjectForKey:key];
 	
 }
 
@@ -110,7 +110,7 @@
 // returns the underlying properties dictionary
 - (id)properties
 {
-	return properties;
+	return _properties;
 }
 
 @end

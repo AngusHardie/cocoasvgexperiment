@@ -20,15 +20,24 @@
 
 
 
-typedef enum {MHConnectablePointTop,MHConnectablePointLeft,MHConnectablePointBottom,MHConnectablePointRight} MHConnectablePointType;
+#ifndef NS_ENUM
+#	define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
+#endif
+
+typedef NS_ENUM(NSUInteger, MHConnectablePointType) {
+	MHConnectablePointTop,
+	MHConnectablePointLeft,
+	MHConnectablePointBottom,
+	MHConnectablePointRight
+};
 
 
 #define OBJECT_LINE_SPACE 25
 
 @implementation MHSVGExporter
 
-@synthesize container;
-@synthesize imageBounds;
+@synthesize container = _container;
+@synthesize imageBounds = _imageBounds;
 
 - (id)init
 {
@@ -71,7 +80,7 @@ typedef enum {MHConnectablePointTop,MHConnectablePointLeft,MHConnectablePointBot
 }
 
 // returns a MHSVGElement representing a line from point start to point end
-// default stroke witdth of 1, color black
+// default stroke width of 1, color black
 - (MHSVGElement*)lineElement:(NSPoint)start end:(NSPoint)end
 {
     id dividerLine = [MHSVGElement elementWithName:@"line"];
@@ -119,9 +128,9 @@ typedef enum {MHConnectablePointTop,MHConnectablePointLeft,MHConnectablePointBot
 
 // returns MHSVGElement representing a rectangle
 - (MHSVGElement*)rectangleElement:(NSRect)objectRect
-             fillColor:(NSColor*)color
-           strokeColor:(NSColor*)strokeColor
-          cornerRadius:(NSUInteger)radius
+						fillColor:(NSColor*)color
+					  strokeColor:(NSColor*)strokeColor
+					 cornerRadius:(NSUInteger)radius
 {
     id mainFrame = [MHSVGElement elementWithName:@"rect"];
 
@@ -164,15 +173,14 @@ typedef enum {MHConnectablePointTop,MHConnectablePointLeft,MHConnectablePointBot
 
 
 #pragma mark - component drawing
-// export SQLCanvas area to SVG,
+// export SQLCanvas area to SVG
 - (MHSVGElement*)exportSQLCanvasAreaToSVG:(SQLCanvasArea*)object
 {
     
     id commentGroup = [MHSVGElement elementWithName:@"g"];
     
-    [commentGroup addAttribute:[NSXMLNode attributeWithName:@"class" stringValue:@"SQLCanvasArea"]];
-    
-
+    [commentGroup addAttribute:[NSXMLNode attributeWithName:@"class" stringValue:NSStringFromClass([object class])]];
+    [commentGroup addAttribute:[NSXMLNode attributeWithName:@"id" stringValue:object.name]];
     
     NSRect areaRect;
     areaRect.origin = [object location];
@@ -300,16 +308,16 @@ typedef enum {MHConnectablePointTop,MHConnectablePointLeft,MHConnectablePointBot
     id exportNode = [NSXMLElement elementWithName:@"svg"];
     
     
-    id viewBoxString = [NSString stringWithFormat:@"%.0f %.0f %.0f %.0f",imageBounds.origin.x,imageBounds.origin.y,imageBounds.size.width,imageBounds.size.height];
+    id viewBoxString = [NSString stringWithFormat:@"%.0f %.0f %.0f %.0f",_imageBounds.origin.x,_imageBounds.origin.y,_imageBounds.size.width,_imageBounds.size.height];
     
     [exportNode addAttribute:[NSXMLNode attributeWithName:@"viewBox" stringValue:viewBoxString]];
     
     
     [exportNode addAttribute:[NSXMLNode attributeWithName:@"width"
-                                              stringValue:[NSString stringWithFormat:@"%.0f",imageBounds.size.width]]];
+                                              stringValue:[NSString stringWithFormat:@"%.0f",_imageBounds.size.width]]];
 
     [exportNode addAttribute:[NSXMLNode attributeWithName:@"height"
-                                              stringValue:[NSString stringWithFormat:@"%.0f",imageBounds.size.height]]];
+                                              stringValue:[NSString stringWithFormat:@"%.0f",_imageBounds.size.height]]];
     
     id namespace = [NSXMLNode namespaceWithName:@"" stringValue:@"http://www.w3.org/2000/svg"];
     

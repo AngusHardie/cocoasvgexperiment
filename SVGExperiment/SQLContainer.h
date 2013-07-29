@@ -13,7 +13,7 @@
 
 {
     
-    NSMutableArray* objectList;
+    NSMutableArray* _objectList;
 }
 
 @property (retain) NSMutableArray* objectList;
